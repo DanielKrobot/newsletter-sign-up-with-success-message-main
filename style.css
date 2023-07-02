@@ -100,7 +100,7 @@ button:hover {
 
 #success {
     background-color: white;
-    display: grid;
+    display: none;
     width: 500px;
     padding: 3rem;
     border-radius: 2rem;

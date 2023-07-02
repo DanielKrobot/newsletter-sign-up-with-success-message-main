@@ -1,6 +1,9 @@
-const button = document.querySelector("button");
+const button1 = document.querySelector("#subscribe");
+const button2 = document.querySelector("#dismiss");
 const email = document.querySelector("#email");
 const error = document.querySelector("#error");
+const main = document.querySelector("main");
+const success = document.querySelector("#success");
 
 function showError() {
     error.style.display = "block";
@@ -14,13 +17,21 @@ function removeError() {
     email.style.backgroundColor = "white";
 };
 
-button.addEventListener("click", () => {
+button1.addEventListener("click", () => {
     removeError();
     if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
-        location.replace("/success.html");
+        success.style.display = "grid";
+        main.style.display = "none";
     } else {
         showError();
     };
+});
+
+button2.addEventListener("click", () => {
+    removeError();
+    success.style.display = "none";
+    main.style.display = "grid";
+    email.value = "";
 });
 
 window.addEventListener('resize', function() {
