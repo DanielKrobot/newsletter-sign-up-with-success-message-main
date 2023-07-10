@@ -37,8 +37,8 @@ button2.addEventListener("click", () => {
 window.addEventListener('resize', function() {
     const image = document.getElementById('illustration');
     if (window.innerWidth < 900) {
-      image.src = '/assets/images/illustration-sign-up-mobile.svg';
+      image.src = './assets/images/illustration-sign-up-mobile.svg';
     } else {
-        image.src ="/assets/images/illustration-sign-up-desktop.svg";
+        image.src ="./assets/images/illustration-sign-up-desktop.svg";
     };
   });
